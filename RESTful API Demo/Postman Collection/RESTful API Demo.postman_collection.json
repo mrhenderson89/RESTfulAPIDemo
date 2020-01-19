@@ -1,0 +1,257 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AntAlbelliTechnical",
+		"_postman_id": "3af975e8-0153-7e52-7902-75c8efa14d20",
+		"description": "Collection of requests to demo the AntAlbelliTechnical project. Localhost URL might need to be changed.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Customers",
+					"request": {
+						"url": "http://localhost:49578/api/customers/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer By Id",
+					"request": {
+						"url": "http://localhost:49578/api/customers/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer By Id (With Orders)",
+					"request": {
+						"url": "http://localhost:49578/api/customers/1/orders",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Customer",
+					"request": {
+						"url": "http://localhost:49578/api/customers/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Name\": \"New Customer\",\n\t\"Email\": \"NewCustomer@TestEmail.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"url": "http://localhost:49578/api/customers/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Id\": \"7\",\n\t\"Name\": \"New Customer - Updated\",\n\t\"Email\": \"NewCustomer@TestEmail.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"url": "http://localhost:49578/api/customers/7",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Orders",
+					"request": {
+						"url": "http://localhost:49578/api/orders",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order By Id",
+					"request": {
+						"url": "http://localhost:49578/api/orders/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order By Order Status",
+					"request": {
+						"url": {
+							"raw": "http://localhost:49578/api/orders/status?status=Placed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49578",
+							"path": [
+								"api",
+								"orders",
+								"status"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "Placed",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Order",
+					"request": {
+						"url": "http://localhost:49578/api/orders/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Price\": \"10\",\n\t\"CustomerId\": 1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"url": "http://localhost:49578/api/orders/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Id\": 9,\n\t\"Price\": \"20\",\n\t\"CustomerId\": 1,\n\t\"CreatedDate\": \"1/09/2019 12:00:00 AM\",\n\t\"OrderStatus\": \"Paid\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"url": "http://localhost:49578/api/orders/9",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Id\": 9,\n\t\"Price\": \"20\",\n\t\"CustomerId\": 1,\n\t\"CreatedDate\": \"1/09/2019 12:00:00 AM\",\n\t\"OrderStatus\": \"Paid\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

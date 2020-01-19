@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTful API Demo", "RESTful API Demo\RESTful API Demo.csproj", "{16822097-2D4E-486F-AE7D-96E16B937E09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTful API Demo.Tests", "RESTful API Demo.Tests\RESTful API Demo.Tests.csproj", "{F496CA41-C07A-4EFD-9E99-65A8E0D5B4A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{F95E6022-C877-44E0-91BE-D6E800FC50E0}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Database_Create.sql = ..\..\Database_Create.sql
+		..\..\Database_Test_Data.sql = ..\..\Database_Test_Data.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman Collection", "Postman Collection", "{6F664F80-FB8B-4239-92A6-FD2AB06FEE3C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Jobs\albelli\RESTful API Demo.postman_collection.json = ..\..\..\Jobs\albelli\RESTful API Demo.postman_collection.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16822097-2D4E-486F-AE7D-96E16B937E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16822097-2D4E-486F-AE7D-96E16B937E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16822097-2D4E-486F-AE7D-96E16B937E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16822097-2D4E-486F-AE7D-96E16B937E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F496CA41-C07A-4EFD-9E99-65A8E0D5B4A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F496CA41-C07A-4EFD-9E99-65A8E0D5B4A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F496CA41-C07A-4EFD-9E99-65A8E0D5B4A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F496CA41-C07A-4EFD-9E99-65A8E0D5B4A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E56AEFE-9898-4AC9-822A-B274CE2F58ED}
+	EndGlobalSection
+EndGlobal
